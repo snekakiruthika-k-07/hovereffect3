@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btns{
+            display:flex;
+            column-gap: 2rem;
+            display: inline-block;
+            margin-top: 250px;
+        }
+        .btn{
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-left: 25px;
+            border-radius: 25px;
+            background-color: blueviolet;
+            cursor: pointer;
+            transition:scale 0.25s ease-in,
+                    opacity 0.25s ease-in,
+                    filter 0.25s ease-in;
+            &:hover{
+                scale:1.2;
+                box-shadow: 20px 20px 10px black;
+            }
+        }
+        .btns:has(.btn:hover) .btn:not(:hover){
+            scale:0.8;
+            opacity:0.8;
+            filter:blur(4px);
+        }
+    </style>
+</head>
+<body>
+    <center>
+   <div class="btns">
+    <button class="btn">HOVER ME!</button>
+    <button class="btn">HOVER ME!</button>
+    <button class="btn">HOVER ME!</button>
+   </div> 
+   </center>
+</body>
+</html>
